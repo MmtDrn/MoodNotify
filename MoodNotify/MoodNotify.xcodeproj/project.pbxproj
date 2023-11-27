@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */; };
 		B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */; };
 		B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4D2B1495E100F10B4D /* LoginView.swift */; };
 		B5E30D502B1495E300F10B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E30D4F2B1495E300F10B4D /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		B5E30D482B1495E100F10B4D /* MoodNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodNotifyApp.swift; sourceTree = "<group>"; };
 		B5E30D4D2B1495E100F10B4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B533EC592B14C33E005E6498 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B5E30D3F2B1495E100F10B4D = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 			children = (
 				B5E30D762B14961500F10B4D /* LoginView */,
 				B5E30D752B14961000F10B4D /* App */,
+				B533EC592B14C33E005E6498 /* Extension */,
 				B5E30D512B1495E300F10B4D /* Preview Content */,
 			);
 			path = MoodNotify;
@@ -273,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */,
 				B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */,
 				B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */,
 			);
