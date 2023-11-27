@@ -9,7 +9,13 @@ import SwiftUI
 
 extension CGFloat {
     static func widthSize(_ value: Self) -> Self {
-        return UIScreen.main.bounds.width * (value/414)
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            return UIScreen.main.bounds.width * (value/414)
+        case .pad:
+            return UIScreen.main.bounds.width * (value/614)
+        default: return .zero
+        }
     }
     
     static func heightSize(_ value: Self) -> Self {
