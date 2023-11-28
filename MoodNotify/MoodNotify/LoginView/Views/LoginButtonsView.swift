@@ -14,7 +14,7 @@ struct LoginButtonsView: View {
                 Button {
                     
                 } label: {
-                    NavigationLink(destination: EmptyView()) {
+                    NavigationLink(destination: PhoneNumberView()) {
                         HStack {
                             Image(systemName: "phone.circle")
                                 .font(.title)
