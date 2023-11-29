@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DigitsCodeView: View {
     // MARK: - Properties
-    
+    @State private var remainingSeconds = 120
+    @State private var timer: Timer?
+    @State private var buttonTitle: String = "Continue"
     
     // MARK: - Body
     var body: some View {
@@ -22,9 +24,7 @@ struct DigitsCodeView: View {
                 .shadow(color: .white, radius: 5)
                 .padding(.top, .heightSize(50))
             
-            Text("EnterOTP code we sent to +123213xxx. This code will expired in 01:50")
-                .font(.subheadline)
-                .fontWeight(.thin)
+            Text("EnterOTP code we sent to +123213213. This code will expired in \(formatTime(remainingSeconds))".convertAttributed())
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.colorButton)
                 .padding(.horizontal, .widthSize(50))
@@ -32,9 +32,10 @@ struct DigitsCodeView: View {
            CodeInputView()
             
             Button {
-                // Move to the next step
+                remainingSeconds = 120
+                startTimer()
             } label: {
-                Text("Continue")
+                Text(buttonTitle)
             }
             .padding(.top)
             .padding(.horizontal, .widthSize(40))
@@ -46,7 +47,28 @@ struct DigitsCodeView: View {
             LinearGradient(colors: [.colorWomen.opacity(0.8), .colorMan.opacity(0.8)], startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
         )
+        .onAppear {
+            startTimer()
+        }
     }
+    
+    func startTimer() {
+        buttonTitle = "Continue"
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                if remainingSeconds > 0 {
+                    remainingSeconds -= 1
+                } else {
+                    timer.invalidate()
+                    buttonTitle = "Send again"
+                }
+            }
+        }
+
+        func formatTime(_ seconds: Int) -> String {
+            let minutes = seconds / 60
+            let seconds = seconds % 60
+            return String(format: "%02d:%02d", minutes, seconds)
+        }
 }
 
 #Preview {

@@ -21,6 +21,7 @@
 		B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8042B17391E005EEB26 /* CodeInputView.swift */; };
 		B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */; };
 		B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */; };
+		B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB80B2B176FFC005EEB26 /* String+Ext.swift */; };
 		B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */; };
 		B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4D2B1495E100F10B4D /* LoginView.swift */; };
 		B5E30D502B1495E300F10B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E30D4F2B1495E300F10B4D /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		B58CB8042B17391E005EEB26 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
 		B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
 		B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneStep.swift; sourceTree = "<group>"; };
+		B58CB80B2B176FFC005EEB26 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B5E30D482B1495E100F10B4D /* MoodNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodNotifyApp.swift; sourceTree = "<group>"; };
 		B5E30D4D2B1495E100F10B4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */,
 				B5546DB12B15E93F007CE5B4 /* Bundle+Ext.swift */,
 				B5546DB92B15F02D007CE5B4 /* View+Ext.swift */,
+				B58CB80B2B176FFC005EEB26 /* String+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				B5546DBD2B15F167007CE5B4 /* PickCPCodeView.swift in Sources */,
 				B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */,
 				B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */,
+				B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */,
 				B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
