@@ -10,13 +10,17 @@
 		B506E8672B1553D400921852 /* LoginButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506E8662B1553D400921852 /* LoginButtonsView.swift */; };
 		B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */; };
 		B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533EC5D2B14C6A3005E6498 /* CircleView.swift */; };
-		B5546DB02B15E51C007CE5B4 /* EnterPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DAF2B15E51C007CE5B4 /* EnterPhoneView.swift */; };
+		B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */; };
 		B5546DB22B15E93F007CE5B4 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB12B15E93F007CE5B4 /* Bundle+Ext.swift */; };
 		B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB42B15E98C007CE5B4 /* CPDataModel.swift */; };
 		B5546DB82B15E9D1007CE5B4 /* CountryNumbers.json in Resources */ = {isa = PBXBuildFile; fileRef = B5546DB72B15E9D1007CE5B4 /* CountryNumbers.json */; };
 		B5546DBA2B15F02D007CE5B4 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB92B15F02D007CE5B4 /* View+Ext.swift */; };
 		B5546DBD2B15F167007CE5B4 /* PickCPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */; };
 		B5546DC22B1613E5007CE5B4 /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DC12B1613E5007CE5B4 /* OnboardingButtonStyle.swift */; };
+		B58CB8032B172598005EEB26 /* DigitsCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8022B172598005EEB26 /* DigitsCodeView.swift */; };
+		B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8042B17391E005EEB26 /* CodeInputView.swift */; };
+		B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */; };
+		B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */; };
 		B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */; };
 		B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4D2B1495E100F10B4D /* LoginView.swift */; };
 		B5E30D502B1495E300F10B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E30D4F2B1495E300F10B4D /* Assets.xcassets */; };
@@ -47,13 +51,17 @@
 		B506E8662B1553D400921852 /* LoginButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonsView.swift; sourceTree = "<group>"; };
 		B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		B533EC5D2B14C6A3005E6498 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		B5546DAF2B15E51C007CE5B4 /* EnterPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneView.swift; sourceTree = "<group>"; };
+		B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerifyView.swift; sourceTree = "<group>"; };
 		B5546DB12B15E93F007CE5B4 /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		B5546DB42B15E98C007CE5B4 /* CPDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDataModel.swift; sourceTree = "<group>"; };
 		B5546DB72B15E9D1007CE5B4 /* CountryNumbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CountryNumbers.json; sourceTree = "<group>"; };
 		B5546DB92B15F02D007CE5B4 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickCPCodeView.swift; sourceTree = "<group>"; };
 		B5546DC12B1613E5007CE5B4 /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
+		B58CB8022B172598005EEB26 /* DigitsCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsCodeView.swift; sourceTree = "<group>"; };
+		B58CB8042B17391E005EEB26 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
+		B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
+		B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneStep.swift; sourceTree = "<group>"; };
 		B5E30D482B1495E100F10B4D /* MoodNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodNotifyApp.swift; sourceTree = "<group>"; };
 		B5E30D4D2B1495E100F10B4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 		B5546DB62B15E9C1007CE5B4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B58CB8082B176234005EEB26 /* Enums */,
 				B5546DBE2B16139E007CE5B4 /* Style */,
 				B5546DB72B15E9D1007CE5B4 /* CountryNumbers.json */,
 				B533EC592B14C33E005E6498 /* Extension */,
@@ -149,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B58CB7FF2B171777005EEB26 /* Views */,
-				B5546DAF2B15E51C007CE5B4 /* EnterPhoneView.swift */,
+				B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */,
 			);
 			path = EnterPhoneView;
 			sourceTree = "<group>";
@@ -158,8 +167,19 @@
 			isa = PBXGroup;
 			children = (
 				B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */,
+				B58CB8022B172598005EEB26 /* DigitsCodeView.swift */,
+				B58CB8042B17391E005EEB26 /* CodeInputView.swift */,
+				B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B58CB8082B176234005EEB26 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		B5E30D3F2B1495E100F10B4D = {
@@ -369,16 +389,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B506E8672B1553D400921852 /* LoginButtonsView.swift in Sources */,
+				B58CB8032B172598005EEB26 /* DigitsCodeView.swift in Sources */,
+				B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */,
 				B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */,
 				B5546DBA2B15F02D007CE5B4 /* View+Ext.swift in Sources */,
 				B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */,
 				B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */,
 				B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */,
 				B5546DB22B15E93F007CE5B4 /* Bundle+Ext.swift in Sources */,
+				B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */,
 				B5546DC22B1613E5007CE5B4 /* OnboardingButtonStyle.swift in Sources */,
 				B5546DBD2B15F167007CE5B4 /* PickCPCodeView.swift in Sources */,
-				B5546DB02B15E51C007CE5B4 /* EnterPhoneView.swift in Sources */,
+				B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */,
 				B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */,
+				B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
