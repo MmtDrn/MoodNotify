@@ -104,7 +104,6 @@
 		B533EC5C2B14C698005E6498 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B5546DBB2B15F121007CE5B4 /* PhoneNumberView */,
 				B533EC5D2B14C6A3005E6498 /* CircleView.swift */,
 				B506E8662B1553D400921852 /* LoginButtonsView.swift */,
 			);
@@ -129,21 +128,38 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		B5546DBB2B15F121007CE5B4 /* PhoneNumberView */ = {
-			isa = PBXGroup;
-			children = (
-				B5546DAF2B15E51C007CE5B4 /* EnterPhoneView.swift */,
-				B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */,
-			);
-			path = PhoneNumberView;
-			sourceTree = "<group>";
-		};
 		B5546DBE2B16139E007CE5B4 /* Style */ = {
 			isa = PBXGroup;
 			children = (
 				B5546DC12B1613E5007CE5B4 /* OnboardingButtonStyle.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		B58CB7FD2B17172D005EEB26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B58CB7FE2B171751005EEB26 /* EnterPhoneView */,
+				B5E30D762B14961500F10B4D /* LoginView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B58CB7FE2B171751005EEB26 /* EnterPhoneView */ = {
+			isa = PBXGroup;
+			children = (
+				B58CB7FF2B171777005EEB26 /* Views */,
+				B5546DAF2B15E51C007CE5B4 /* EnterPhoneView.swift */,
+			);
+			path = EnterPhoneView;
+			sourceTree = "<group>";
+		};
+		B58CB7FF2B171777005EEB26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B5E30D3F2B1495E100F10B4D = {
@@ -169,8 +185,8 @@
 		B5E30D4A2B1495E100F10B4D /* MoodNotify */ = {
 			isa = PBXGroup;
 			children = (
+				B58CB7FD2B17172D005EEB26 /* Views */,
 				B5E30D752B14961000F10B4D /* App */,
-				B5E30D762B14961500F10B4D /* LoginView */,
 				B5546DB62B15E9C1007CE5B4 /* Helper */,
 				B5546DB32B15E963007CE5B4 /* Model */,
 				B5E30D512B1495E300F10B4D /* Preview Content */,
