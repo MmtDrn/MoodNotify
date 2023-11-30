@@ -10,6 +10,7 @@ import SwiftUI
 struct StepButtonsView: View {
     // MARK: - Properties
     @Binding var currentStep: Int
+    private let stepCount: Int = RegisterStep.allCases.count
     
     var body: some View {
         HStack {
@@ -27,7 +28,9 @@ struct StepButtonsView: View {
                         Circle()
                             .foregroundStyle(.colorButton)
                     )
+                    .opacity(currentStep == 0 ? 0 : 1)
             })
+            .disabled(currentStep == 0)
             .padding()
             
             Spacer()
@@ -46,7 +49,9 @@ struct StepButtonsView: View {
                         Circle()
                             .foregroundStyle(.colorButton)
                     )
+                    .opacity(currentStep == stepCount ? 0 : 1)
             })
+            .disabled(currentStep == stepCount)
             .padding()
         }
     }
