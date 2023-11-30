@@ -75,15 +75,20 @@ struct LoginButtonsView: View {
             } //: Buttons
             
             Button(action: {}, label: {
-                Text("Don't have an account?")
-                    .font(.footnote)
-                    .fontWeight(.regular)
-                    .foregroundStyle(.gray)
-                
-                Text("Sign Up")
-                    .font(.footnote)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.blue)
+                NavigationLink {
+                    RegisterView()
+                } label: {
+                    Text("Don't have an account?")
+                        .font(.footnote)
+                        .fontWeight(.regular)
+                        .foregroundStyle(.gray)
+                    
+                    Text("Sign Up")
+                        .font(.footnote)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.blue)
+                }
+
             }) //: SignupButton
         }
     }

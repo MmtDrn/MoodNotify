@@ -25,6 +25,7 @@
 		B5C432542B186882000EDA16 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432532B186882000EDA16 /* RegisterView.swift */; };
 		B5C432562B187D2C000EDA16 /* RegisterStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432552B187D2C000EDA16 /* RegisterStep.swift */; };
 		B5C432592B1894B4000EDA16 /* StepBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432582B1894B4000EDA16 /* StepBarView.swift */; };
+		B5C4325B2B189AD9000EDA16 /* StepButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4325A2B189AD9000EDA16 /* StepButtonsView.swift */; };
 		B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */; };
 		B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4D2B1495E100F10B4D /* LoginView.swift */; };
 		B5E30D502B1495E300F10B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E30D4F2B1495E300F10B4D /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		B5C432532B186882000EDA16 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B5C432552B187D2C000EDA16 /* RegisterStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStep.swift; sourceTree = "<group>"; };
 		B5C432582B1894B4000EDA16 /* StepBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarView.swift; sourceTree = "<group>"; };
+		B5C4325A2B189AD9000EDA16 /* StepButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepButtonsView.swift; sourceTree = "<group>"; };
 		B5E30D482B1495E100F10B4D /* MoodNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodNotifyApp.swift; sourceTree = "<group>"; };
 		B5E30D4D2B1495E100F10B4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C432582B1894B4000EDA16 /* StepBarView.swift */,
+				B5C4325A2B189AD9000EDA16 /* StepButtonsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */,
 				B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */,
 				B5546DBA2B15F02D007CE5B4 /* View+Ext.swift in Sources */,
+				B5C4325B2B189AD9000EDA16 /* StepButtonsView.swift in Sources */,
 				B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */,
 				B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */,
 				B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */,
