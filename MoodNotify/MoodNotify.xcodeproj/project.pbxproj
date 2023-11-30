@@ -22,6 +22,9 @@
 		B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */; };
 		B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */; };
 		B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB80B2B176FFC005EEB26 /* String+Ext.swift */; };
+		B5C432542B186882000EDA16 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432532B186882000EDA16 /* RegisterView.swift */; };
+		B5C432562B187D2C000EDA16 /* RegisterStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432552B187D2C000EDA16 /* RegisterStep.swift */; };
+		B5C432592B1894B4000EDA16 /* StepBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432582B1894B4000EDA16 /* StepBarView.swift */; };
 		B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */; };
 		B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D4D2B1495E100F10B4D /* LoginView.swift */; };
 		B5E30D502B1495E300F10B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E30D4F2B1495E300F10B4D /* Assets.xcassets */; };
@@ -64,6 +67,9 @@
 		B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
 		B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneStep.swift; sourceTree = "<group>"; };
 		B58CB80B2B176FFC005EEB26 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		B5C432532B186882000EDA16 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		B5C432552B187D2C000EDA16 /* RegisterStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStep.swift; sourceTree = "<group>"; };
+		B5C432582B1894B4000EDA16 /* StepBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarView.swift; sourceTree = "<group>"; };
 		B5E30D482B1495E100F10B4D /* MoodNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E30D4B2B1495E100F10B4D /* MoodNotifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodNotifyApp.swift; sourceTree = "<group>"; };
 		B5E30D4D2B1495E100F10B4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		B58CB7FD2B17172D005EEB26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5C432522B186873000EDA16 /* RegisterView */,
 				B58CB7FE2B171751005EEB26 /* EnterPhoneView */,
 				B5E30D762B14961500F10B4D /* LoginView */,
 			);
@@ -181,8 +188,26 @@
 			isa = PBXGroup;
 			children = (
 				B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */,
+				B5C432552B187D2C000EDA16 /* RegisterStep.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		B5C432522B186873000EDA16 /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				B5C432572B1893C5000EDA16 /* Views */,
+				B5C432532B186882000EDA16 /* RegisterView.swift */,
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		B5C432572B1893C5000EDA16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5C432582B1894B4000EDA16 /* StepBarView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B5E30D3F2B1495E100F10B4D = {
@@ -393,12 +418,14 @@
 			files = (
 				B506E8672B1553D400921852 /* LoginButtonsView.swift in Sources */,
 				B58CB8032B172598005EEB26 /* DigitsCodeView.swift in Sources */,
+				B5C432592B1894B4000EDA16 /* StepBarView.swift in Sources */,
 				B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */,
 				B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */,
 				B5546DBA2B15F02D007CE5B4 /* View+Ext.swift in Sources */,
 				B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */,
 				B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */,
 				B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */,
+				B5C432542B186882000EDA16 /* RegisterView.swift in Sources */,
 				B5546DB22B15E93F007CE5B4 /* Bundle+Ext.swift in Sources */,
 				B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */,
 				B5546DC22B1613E5007CE5B4 /* OnboardingButtonStyle.swift in Sources */,
@@ -406,6 +433,7 @@
 				B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */,
 				B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */,
 				B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */,
+				B5C432562B187D2C000EDA16 /* RegisterStep.swift in Sources */,
 				B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
