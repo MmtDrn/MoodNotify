@@ -10,6 +10,7 @@ import SwiftUI
 struct StepButtonsView: View {
     // MARK: - Properties
     @Binding var currentStep: Int
+    @Binding var step: RegisterStep
     private let stepCount: Int = RegisterStep.allCases.count
     
     var body: some View {
@@ -17,7 +18,9 @@ struct StepButtonsView: View {
             Button(action: {
                 withAnimation {
                     currentStep -= 1
+                    
                 }
+                step = .init(rawValue: currentStep-1)!
             }, label: {
                 Image(systemName: "arrow.left")
                     .foregroundStyle(.white)
@@ -28,14 +31,15 @@ struct StepButtonsView: View {
                         Circle()
                             .foregroundStyle(.colorButton)
                     )
-                    .opacity(currentStep == 0 ? 0 : 1)
+                    .opacity(currentStep == 1 ? 0 : 1)
             })
-            .disabled(currentStep == 0)
+            .disabled(currentStep == 1)
             .padding()
             
             Spacer()
             
             Button(action: {
+                step = .init(rawValue: currentStep)!
                 withAnimation {
                     currentStep += 1
                 }
@@ -58,5 +62,5 @@ struct StepButtonsView: View {
 }
 
 #Preview {
-    StepButtonsView(currentStep: .constant(2))
+    StepButtonsView(currentStep: .constant(2), step: .constant(.nameBirthday))
 }

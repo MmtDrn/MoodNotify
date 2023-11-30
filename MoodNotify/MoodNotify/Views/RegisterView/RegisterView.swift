@@ -9,15 +9,21 @@ import SwiftUI
 
 struct RegisterView: View {
     // MARK: - Properties
-    private var step: RegisterStep = .nameBirthday
-    @State var currentStep: Int = 0
+    @State private var step: RegisterStep = .nameBirthday
+    @State var currentStep: Int = 1
     
     // MARK: - Body
     var body: some View {
         VStack {
+            Text(step.title)
+                .font(.title2)
+                .fontWeight(.semibold)
+                .foregroundStyle(.colorButton)
+                .padding(.top, .heightSize(40))
+            
             Spacer()
             
-            StepButtonsView(currentStep: $currentStep)
+            StepButtonsView(currentStep: $currentStep, step: $step)
             
             StepBarView(lineColor: .colorButton, stepCount: RegisterStep.allCases.count, currentStep: $currentStep)
                 .padding(.bottom, 30)
