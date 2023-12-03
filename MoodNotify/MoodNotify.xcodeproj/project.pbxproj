@@ -12,6 +12,8 @@
 		B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533EC5D2B14C6A3005E6498 /* CircleView.swift */; };
 		B54AF9C62B19D8340035BDBA /* NameBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C52B19D8340035BDBA /* NameBirthdayView.swift */; };
 		B54AF9C82B19E3FB0035BDBA /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C72B19E3FB0035BDBA /* GenderView.swift */; };
+		B54AF9CA2B19E9100035BDBA /* InterestsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C92B19E9100035BDBA /* InterestsModel.swift */; };
+		B54AF9CC2B1A132C0035BDBA /* InterestItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9CB2B1A132C0035BDBA /* InterestItemView.swift */; };
 		B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */; };
 		B5546DB22B15E93F007CE5B4 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB12B15E93F007CE5B4 /* Bundle+Ext.swift */; };
 		B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB42B15E98C007CE5B4 /* CPDataModel.swift */; };
@@ -19,6 +21,7 @@
 		B5546DBA2B15F02D007CE5B4 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB92B15F02D007CE5B4 /* View+Ext.swift */; };
 		B5546DBD2B15F167007CE5B4 /* PickCPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */; };
 		B5546DC22B1613E5007CE5B4 /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DC12B1613E5007CE5B4 /* OnboardingButtonStyle.swift */; };
+		B55A6D072B1CA9D800A7CCEA /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A6D062B1CA9D800A7CCEA /* InterestView.swift */; };
 		B58CB8032B172598005EEB26 /* DigitsCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8022B172598005EEB26 /* DigitsCodeView.swift */; };
 		B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8042B17391E005EEB26 /* CodeInputView.swift */; };
 		B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */; };
@@ -60,6 +63,8 @@
 		B533EC5D2B14C6A3005E6498 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		B54AF9C52B19D8340035BDBA /* NameBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameBirthdayView.swift; sourceTree = "<group>"; };
 		B54AF9C72B19E3FB0035BDBA /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
+		B54AF9C92B19E9100035BDBA /* InterestsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsModel.swift; sourceTree = "<group>"; };
+		B54AF9CB2B1A132C0035BDBA /* InterestItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestItemView.swift; sourceTree = "<group>"; };
 		B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerifyView.swift; sourceTree = "<group>"; };
 		B5546DB12B15E93F007CE5B4 /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		B5546DB42B15E98C007CE5B4 /* CPDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDataModel.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		B5546DB92B15F02D007CE5B4 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickCPCodeView.swift; sourceTree = "<group>"; };
 		B5546DC12B1613E5007CE5B4 /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
+		B55A6D062B1CA9D800A7CCEA /* InterestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
 		B58CB8022B172598005EEB26 /* DigitsCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsCodeView.swift; sourceTree = "<group>"; };
 		B58CB8042B17391E005EEB26 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
 		B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B5546DB42B15E98C007CE5B4 /* CPDataModel.swift */,
+				B54AF9C92B19E9100035BDBA /* InterestsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 				B5C4325A2B189AD9000EDA16 /* StepButtonsView.swift */,
 				B54AF9C52B19D8340035BDBA /* NameBirthdayView.swift */,
 				B54AF9C72B19E3FB0035BDBA /* GenderView.swift */,
+				B54AF9CB2B1A132C0035BDBA /* InterestItemView.swift */,
+				B55A6D062B1CA9D800A7CCEA /* InterestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -433,10 +442,13 @@
 				B54AF9C82B19E3FB0035BDBA /* GenderView.swift in Sources */,
 				B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */,
 				B5546DBA2B15F02D007CE5B4 /* View+Ext.swift in Sources */,
+				B54AF9CA2B19E9100035BDBA /* InterestsModel.swift in Sources */,
+				B54AF9CC2B1A132C0035BDBA /* InterestItemView.swift in Sources */,
 				B5C4325B2B189AD9000EDA16 /* StepButtonsView.swift in Sources */,
 				B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */,
 				B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */,
 				B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */,
+				B55A6D072B1CA9D800A7CCEA /* InterestView.swift in Sources */,
 				B5C432542B186882000EDA16 /* RegisterView.swift in Sources */,
 				B5546DB22B15E93F007CE5B4 /* Bundle+Ext.swift in Sources */,
 				B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */,
