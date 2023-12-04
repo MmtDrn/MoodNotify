@@ -21,6 +21,17 @@ struct RegisterView: View {
                 .foregroundStyle(.colorButton)
                 .padding(.top, .heightSize(40))
             
+            switch step {
+            case .nameBirthday:
+                NameBirthdayView()
+            case .gender:
+                GenderView()
+            case .interest:
+                InterestView()
+            case .photos:
+               PhotosPickerView()
+            }
+            
             Spacer()
             
             StepButtonsView(currentStep: $currentStep, step: $step)
@@ -39,3 +50,18 @@ struct RegisterView: View {
 #Preview {
     RegisterView()
 }
+
+/**
+ 
+ switch step {
+ case .nameBirthday:
+     NameBirthdayView()
+ case .gender:
+     GenderView()
+ case .interest:
+     InterestView()
+ case .photos:
+    PhotosPickerView()
+ }
+ 
+ */
