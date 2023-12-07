@@ -16,6 +16,7 @@
 		B54AF9C82B19E3FB0035BDBA /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C72B19E3FB0035BDBA /* GenderView.swift */; };
 		B54AF9CA2B19E9100035BDBA /* InterestsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C92B19E9100035BDBA /* InterestsModel.swift */; };
 		B54AF9CC2B1A132C0035BDBA /* InterestItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9CB2B1A132C0035BDBA /* InterestItemView.swift */; };
+		B5518E832B1F497A003FF8DB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5518E822B1F497A003FF8DB /* RegisterViewModel.swift */; };
 		B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */; };
 		B5546DB22B15E93F007CE5B4 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB12B15E93F007CE5B4 /* Bundle+Ext.swift */; };
 		B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DB42B15E98C007CE5B4 /* CPDataModel.swift */; };
@@ -69,6 +70,7 @@
 		B54AF9C72B19E3FB0035BDBA /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
 		B54AF9C92B19E9100035BDBA /* InterestsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsModel.swift; sourceTree = "<group>"; };
 		B54AF9CB2B1A132C0035BDBA /* InterestItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestItemView.swift; sourceTree = "<group>"; };
+		B5518E822B1F497A003FF8DB /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerifyView.swift; sourceTree = "<group>"; };
 		B5546DB12B15E93F007CE5B4 /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		B5546DB42B15E98C007CE5B4 /* CPDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDataModel.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				B5C432572B1893C5000EDA16 /* Views */,
 				B5C432532B186882000EDA16 /* RegisterView.swift */,
+				B5518E822B1F497A003FF8DB /* RegisterViewModel.swift */,
 			);
 			path = RegisterView;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */,
 				B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */,
 				B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */,
+				B5518E832B1F497A003FF8DB /* RegisterViewModel.swift in Sources */,
 				B5289B712B1DEBC200E482FE /* PickPhotoView.swift in Sources */,
 				B5C432562B187D2C000EDA16 /* RegisterStep.swift in Sources */,
 				B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */,

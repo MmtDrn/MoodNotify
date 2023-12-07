@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct RegisterView: View {
-    // MARK: - Properties
-    @State private var step: RegisterStep = .nameBirthday
-    @State var currentStep: Int = 1
+    @ObservedObject private var viewModel = RegisterViewModel()
     
     // MARK: - Body
     var body: some View {
         VStack {
-            Text(step.title)
+            Text(viewModel.currentStep.title)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .foregroundStyle(.colorButton)
                 .padding(.top, .heightSize(40))
             
-            switch step {
+            switch viewModel.currentStep {
             case .nameBirthday:
                 NameBirthdayView()
             case .gender:
@@ -34,9 +32,9 @@ struct RegisterView: View {
             
             Spacer()
             
-            StepButtonsView(currentStep: $currentStep, step: $step)
+            StepButtonsView(currentStep: $viewModel.stepIndex)
             
-            StepBarView(lineColor: .colorButton, stepCount: RegisterStep.allCases.count, currentStep: $currentStep)
+            StepBarView(lineColor: .colorButton, stepCount: RegisterStep.allCases.count, currentStep: $viewModel.stepIndex)
                 .padding(.bottom, 30)
                 .padding(.horizontal)
             
@@ -50,18 +48,3 @@ struct RegisterView: View {
 #Preview {
     RegisterView()
 }
-
-/**
- 
- switch step {
- case .nameBirthday:
-     NameBirthdayView()
- case .gender:
-     GenderView()
- case .interest:
-     InterestView()
- case .photos:
-    PhotosPickerView()
- }
- 
- */

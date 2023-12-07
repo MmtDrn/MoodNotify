@@ -15,7 +15,7 @@ struct StepBarView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .trim(from: 0.0, to: CGFloat(currentStep) * (0.5/CGFloat(stepCount)))
+                .trim(from: 0.0, to: CGFloat(currentStep + 1) * (0.5/CGFloat(stepCount)))
                 .stroke(lineColor, style: .init(lineWidth: 12, lineCap: .round))
                 .frame(height: 1)
                 .padding(.horizontal)
@@ -26,6 +26,7 @@ struct StepBarView: View {
                 .padding(.horizontal)
         }
         .rotationEffect(.degrees(180))
+        .animation(.easeInOut(duration: 0.3), value: currentStep)
     }
 }
 
