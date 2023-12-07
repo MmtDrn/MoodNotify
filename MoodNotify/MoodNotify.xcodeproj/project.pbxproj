@@ -12,6 +12,7 @@
 		B5289B712B1DEBC200E482FE /* PickPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5289B702B1DEBC200E482FE /* PickPhotoView.swift */; };
 		B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */; };
 		B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533EC5D2B14C6A3005E6498 /* CircleView.swift */; };
+		B54505BC2B21F9D800BED87D /* PhoneNumberVerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54505BB2B21F9D800BED87D /* PhoneNumberVerifyViewModel.swift */; };
 		B54AF9C62B19D8340035BDBA /* NameBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C52B19D8340035BDBA /* NameBirthdayView.swift */; };
 		B54AF9C82B19E3FB0035BDBA /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C72B19E3FB0035BDBA /* GenderView.swift */; };
 		B54AF9CA2B19E9100035BDBA /* InterestsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AF9C92B19E9100035BDBA /* InterestsModel.swift */; };
@@ -66,6 +67,7 @@
 		B5289B702B1DEBC200E482FE /* PickPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPhotoView.swift; sourceTree = "<group>"; };
 		B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		B533EC5D2B14C6A3005E6498 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		B54505BB2B21F9D800BED87D /* PhoneNumberVerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerifyViewModel.swift; sourceTree = "<group>"; };
 		B54AF9C52B19D8340035BDBA /* NameBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameBirthdayView.swift; sourceTree = "<group>"; };
 		B54AF9C72B19E3FB0035BDBA /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
 		B54AF9C92B19E9100035BDBA /* InterestsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsModel.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				B58CB7FF2B171777005EEB26 /* Views */,
 				B5546DAF2B15E51C007CE5B4 /* PhoneNumberVerifyView.swift */,
+				B54505BB2B21F9D800BED87D /* PhoneNumberVerifyViewModel.swift */,
 			);
 			path = EnterPhoneView;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				B533EC5E2B14C6A3005E6498 /* CircleView.swift in Sources */,
 				B5546DBA2B15F02D007CE5B4 /* View+Ext.swift in Sources */,
 				B54AF9CA2B19E9100035BDBA /* InterestsModel.swift in Sources */,
+				B54505BC2B21F9D800BED87D /* PhoneNumberVerifyViewModel.swift in Sources */,
 				B54AF9CC2B1A132C0035BDBA /* InterestItemView.swift in Sources */,
 				B5C4325B2B189AD9000EDA16 /* StepButtonsView.swift in Sources */,
 				B5546DB52B15E98C007CE5B4 /* CPDataModel.swift in Sources */,

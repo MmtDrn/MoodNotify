@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PhoneNumberVerifyView: View {
-    @State var step: VerifyPhoneStep = .phoneNumber
+    @ObservedObject private var viewModel = PhoneNumberVerifyViewModel()
     
     var body: some View {
         NavigationStack {
-            switch step {
+            switch viewModel.step {
             case .phoneNumber:
-                EnterPhoneNumberView(step: $step)
+                EnterPhoneNumberView(step: $viewModel.step)
             case .code:
                 DigitsCodeView()
             }

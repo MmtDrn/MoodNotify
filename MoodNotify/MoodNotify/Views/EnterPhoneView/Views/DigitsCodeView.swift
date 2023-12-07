@@ -33,7 +33,6 @@ struct DigitsCodeView: View {
             
             Button {
                 remainingSeconds = 120
-                startTimer()
             } label: {
                 Text(buttonTitle)
             }
