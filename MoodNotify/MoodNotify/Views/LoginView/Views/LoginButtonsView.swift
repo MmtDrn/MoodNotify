@@ -9,88 +9,55 @@ import SwiftUI
 
 struct LoginButtonsView: View {
     var body: some View {
-        VStack(spacing: .heightSize(40)) {
-            VStack {
-                Button {
-                    
-                } label: {
-                    NavigationLink(destination: PhoneNumberVerifyView()) {
-                        HStack {
-                            Image(systemName: "phone.circle")
-                                .font(.title)
-                                .foregroundStyle(.white)
-                            
-                            Text("Login with Phone")
-                                .font(.headline)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.white)
-                        }
-                        .frame(width: .widthSize(200))
-                        .padding(.vertical, 5)
-                        .padding(.horizontal)
-                        .background(.colorButton)
-                        .clipShape(.capsule)
-                    }
-                } //: PhoneButton
-            
-                Button {
-                    
-                } label: {
-                    HStack(spacing: 15) {
-                        Image(systemName: "apple.logo")
-                            .font(.title)
-                            .foregroundStyle(.white)
-                        
-                        Text("Login with Apple")
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.white)
-                    }
-                    .frame(width: .widthSize(200))
-                    .padding(.vertical, 5)
-                    .padding(.horizontal)
-                    .background(.colorButton)
-                    .clipShape(.capsule)
-                } //: AppleButton
+        VStack(spacing: .heightSize(10)) {
+            HStack(spacing: 20) {
+                Image(systemName: "phone.circle")
+                    .font(.title)
+                    .foregroundStyle(.white)
                 
-                Button {
-                    
-                } label: {
-                    HStack {
-                        Image(systemName: "g.circle")
-                            .font(.title)
-                            .foregroundStyle(.white)
-                        
-                        Text("Login with Google")
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.white)
-                    }
-                    .frame(width: .widthSize(200))
-                    .padding(.vertical, 5)
-                    .padding(.horizontal)
-                    .background(.colorButton)
-                    .clipShape(.capsule)
-                } //: GoogleButton
-            } //: Buttons
+                Text("Phone Number")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+            }
+            .frame(width: .widthSize(260))
+            .padding(.vertical, 5)
+            .background(.colorButton)
+            .clipShape(.capsule)
             
-            Button(action: {}, label: {
-                NavigationLink {
-                    RegisterView()
-                } label: {
-                    Text("Don't have an account?")
-                        .font(.footnote)
-                        .fontWeight(.regular)
-                        .foregroundStyle(.gray)
+            HStack(spacing: 10) {
+                Button(action: {}, label: {
+                    Image(systemName: "apple.logo")
+                        .font(.title3)
+                        .foregroundStyle(.white)
                     
-                    Text("Sign Up")
-                        .font(.footnote)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.blue)
-                }
-
-            }) //: SignupButton
-        }
+                    Text("Apple")
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .fontWeight(.semibold)
+                })
+                .padding(.horizontal)
+                .padding(.vertical, 5)
+                .background(Color.colorButton)
+                .clipShape(.capsule)
+                
+                Button(action: {}, label: {
+                    Image(systemName: "g.circle")
+                        .font(.title3)
+                        .foregroundStyle(.white)
+                    
+                    Text("Google")
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .fontWeight(.semibold)
+                })
+                .padding(.horizontal)
+                .padding(.vertical, 5)
+                .background(Color.colorButton)
+                .clipShape(.capsule)
+            } //: SocialLogins
+        } //: VStack
+        .padding(.top, .heightSize(40))
     }
 }
 
