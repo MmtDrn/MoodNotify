@@ -46,7 +46,7 @@ struct SplashView: View {
                             .foregroundStyle(.white)
                             .frame(width: .widthSize(320), height: .heightSize(45))
                             .padding(.vertical, 5)
-                            .background(.colorMan)
+                            .background(.colorButtonSecond)
                             .clipShape(.capsule)
                     })
                     
@@ -57,10 +57,10 @@ struct SplashView: View {
                         Text("Sign In")
                             .font(.title2)
                             .fontWeight(.semibold)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.colorButtonSecond)
                             .frame(width: .widthSize(320), height: .heightSize(45))
                             .padding(.vertical, 5)
-                            .background(.colorWomen)
+                            .background(.colorButtonThird.opacity(0.7))
                             .clipShape(.capsule)
                     })
                 } //: Buttons
