@@ -31,6 +31,7 @@
 		B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */; };
 		B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */; };
 		B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB80B2B176FFC005EEB26 /* String+Ext.swift */; };
+		B5AE93222B2AF2C300549577 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE93212B2AF2C300549577 /* SplashView.swift */; };
 		B5C432542B186882000EDA16 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432532B186882000EDA16 /* RegisterView.swift */; };
 		B5C432562B187D2C000EDA16 /* RegisterStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432552B187D2C000EDA16 /* RegisterStep.swift */; };
 		B5C432592B1894B4000EDA16 /* StepBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C432582B1894B4000EDA16 /* StepBarView.swift */; };
@@ -86,6 +87,7 @@
 		B58CB8062B1758E8005EEB26 /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
 		B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneStep.swift; sourceTree = "<group>"; };
 		B58CB80B2B176FFC005EEB26 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		B5AE93212B2AF2C300549577 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		B5C432532B186882000EDA16 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B5C432552B187D2C000EDA16 /* RegisterStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStep.swift; sourceTree = "<group>"; };
 		B5C432582B1894B4000EDA16 /* StepBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		B58CB7FD2B17172D005EEB26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5AE93202B2AF2B000549577 /* SplashView */,
 				B5C432522B186873000EDA16 /* RegisterView */,
 				B58CB7FE2B171751005EEB26 /* EnterPhoneView */,
 				B5E30D762B14961500F10B4D /* LoginView */,
@@ -213,6 +216,14 @@
 				B5C432552B187D2C000EDA16 /* RegisterStep.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		B5AE93202B2AF2B000549577 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE93212B2AF2C300549577 /* SplashView.swift */,
+			);
+			path = SplashView;
 			sourceTree = "<group>";
 		};
 		B5C432522B186873000EDA16 /* RegisterView */ = {
@@ -463,6 +474,7 @@
 				B5E30D4E2B1495E100F10B4D /* LoginView.swift in Sources */,
 				B55A6D072B1CA9D800A7CCEA /* InterestView.swift in Sources */,
 				B5C432542B186882000EDA16 /* RegisterView.swift in Sources */,
+				B5AE93222B2AF2C300549577 /* SplashView.swift in Sources */,
 				B5546DB22B15E93F007CE5B4 /* Bundle+Ext.swift in Sources */,
 				B58CB80A2B17623F005EEB26 /* VerifyPhoneStep.swift in Sources */,
 				B5546DC22B1613E5007CE5B4 /* OnboardingButtonStyle.swift in Sources */,
