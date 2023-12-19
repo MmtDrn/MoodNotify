@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @ObservedObject private var viewModel = LoginViewModel()
+    
     var body: some View {
         VStack(spacing: .heightSize(20)) {
             Text("MoodNotify")
@@ -26,7 +29,14 @@ struct LoginView: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(LinearGradient(colors: [.colorWomen.opacity(2), .colorMan.opacity(2)], startPoint: .leading, endPoint: .trailing))
             
-            LoginButtonsView()
+            LoginButtonsView {
+                viewModel.loginWithPhone()
+            } loginWithAppleAction: {
+                viewModel.loginWithApple()
+            } loginWithGooleAction: {
+                viewModel.loginWithGoogle()
+            }
+
         }
     }
 }

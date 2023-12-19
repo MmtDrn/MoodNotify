@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct LoginButtonsView: View {
+    
+    var loginWithPhoneAction: () -> Void
+    var loginWithAppleAction: () -> Void
+    var loginWithGooleAction: () -> Void
+    
+    
     var body: some View {
         VStack(spacing: .heightSize(15)) {
             
-            Button(action: {}) {
+            Button(action: {
+                loginWithPhoneAction()
+            }) {
                 Image(systemName: "phone.circle")
                     .font(.title)
                     .fontWeight(.semibold)
@@ -30,7 +38,9 @@ struct LoginButtonsView: View {
                     .stroke(.colorButtonSecond, lineWidth: 3)
             )
             
-            Button(action: {}) {
+            Button(action: {
+                loginWithAppleAction()
+            }) {
                 Image(systemName: "apple.logo")
                     .font(.title)
                     .foregroundStyle(.colorButtonSecond)
@@ -48,7 +58,9 @@ struct LoginButtonsView: View {
                     .stroke(.colorButtonSecond, lineWidth: 3)
             )
             
-            Button(action: {}) {
+            Button(action: {
+                loginWithGooleAction()
+            }) {
                 Image(systemName: "g.circle")
                     .font(.title)
                     .fontWeight(.semibold)
@@ -71,6 +83,6 @@ struct LoginButtonsView: View {
     }
 }
 
-#Preview {
-    LoginButtonsView()
-}
+//#Preview {
+//    LoginButtonsView()
+//}
