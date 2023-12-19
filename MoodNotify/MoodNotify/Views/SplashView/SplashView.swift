@@ -14,9 +14,6 @@ enum SplashNavigate {
 
 struct SplashView: View {
     
-    @State var navigateCase: SplashNavigate?
-    @State private var isPresented: Bool = false
-    
     var body: some View {
         NavigationStack {
             VStack(spacing: .heightSize(20)) {
@@ -36,10 +33,7 @@ struct SplashView: View {
                     .padding(.vertical)
                 
                 VStack(spacing: 15) {
-                    Button(action: {
-                        isPresented = true
-                        navigateCase = .login
-                    }, label: {
+                    NavigationLink(value: SplashNavigate.login) {
                         Text("Login")
                             .font(.title2)
                             .fontWeight(.semibold)
@@ -48,12 +42,9 @@ struct SplashView: View {
                             .padding(.vertical, 5)
                             .background(.colorButtonSecond)
                             .clipShape(.capsule)
-                    })
+                    }
                     
-                    Button(action: {
-                        isPresented = true
-                        navigateCase = .sign
-                    }, label: {
+                    NavigationLink(value: SplashNavigate.sign) {
                         Text("Sign In")
                             .font(.title2)
                             .fontWeight(.semibold)
@@ -62,18 +53,16 @@ struct SplashView: View {
                             .padding(.vertical, 5)
                             .background(.colorButtonThird.opacity(0.7))
                             .clipShape(.capsule)
-                    })
-                } //: Buttons
+                    }
+                } //: Links
                 .padding(.top)
             } //: VStack
-            .navigationDestination(isPresented: $isPresented) {
-                switch navigateCase {
+            .navigationDestination(for: SplashNavigate.self) { navigate in
+                switch navigate {
                 case .login:
                     LoginView()
                 case .sign:
                     RegisterView()
-                case .none:
-                    EmptyView()
                 }
             }
         } //: NavigationStack
