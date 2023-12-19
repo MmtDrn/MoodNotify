@@ -9,24 +9,24 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        NavigationStack {
-            VStack(spacing: .heightSize(20)) {
-                Text("MoodNotify")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.colorButton)
-                
-                CircleView()
-                
-                Text("MoodNotify allows you to instantly share your feelings or what you're up to, stay connected with friends, and explore different moods around you!")
-                    .padding(.horizontal)
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(LinearGradient(colors: [.colorWomen.opacity(2), .colorMan.opacity(2)], startPoint: .leading, endPoint: .trailing))
-                
-                LoginButtonsView()
-            }
+        VStack(spacing: .heightSize(20)) {
+            Text("MoodNotify")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundStyle(LinearGradient(colors: [.colorMan.opacity(2), .colorWomen.opacity(2)], startPoint: .leading, endPoint: .trailing))
+                .padding(.bottom, 50)
+            
+            LoginOnboardingView()
+                .padding(.bottom, 100)
+            
+            Text("Choose Your Login Method and Be Notified")
+                .padding(.horizontal)
+                .font(.title3)
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(LinearGradient(colors: [.colorWomen.opacity(2), .colorMan.opacity(2)], startPoint: .leading, endPoint: .trailing))
+            
+            LoginButtonsView()
         }
     }
 }
