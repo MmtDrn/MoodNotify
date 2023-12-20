@@ -29,7 +29,10 @@ struct CodeInputView: View {
                 .foregroundStyle(.colorButton)
                 .keyboardType(.numberPad)
                 .focused($focused1)
-                .background(.white)
+                .background(
+                    RoundedRectangle(cornerRadius: .widthSize(10))
+                        .stroke(.colorButtonSecond, lineWidth: 3)
+                )
                 .clipShape(.rect(cornerRadius: .widthSize(10)))
                 .onChange(of: code1) { newValue in
                     if newValue.count >= 1 {
@@ -46,7 +49,10 @@ struct CodeInputView: View {
                 .foregroundStyle(.colorButton)
                 .keyboardType(.numberPad)
                 .focused($focused2)
-                .background(.white)
+                .background(
+                    RoundedRectangle(cornerRadius: .widthSize(10))
+                        .stroke(.colorButtonSecond, lineWidth: 3)
+                )
                 .clipShape(.rect(cornerRadius: .widthSize(10)))
                 .onChange(of: code2) { newValue in
                     if newValue.count >= 1 {
@@ -63,7 +69,10 @@ struct CodeInputView: View {
                 .foregroundStyle(.colorButton)
                 .keyboardType(.numberPad)
                 .focused($focused3)
-                .background(.white)
+                .background(
+                    RoundedRectangle(cornerRadius: .widthSize(10))
+                        .stroke(.colorButtonSecond, lineWidth: 3)
+                )
                 .clipShape(.rect(cornerRadius: .widthSize(10)))
                 .onChange(of: code3) { newValue in
                     if newValue.count >= 1 {
@@ -80,7 +89,10 @@ struct CodeInputView: View {
                 .foregroundStyle(.colorButton)
                 .keyboardType(.numberPad)
                 .focused($focused4)
-                .background(.white)
+                .background(
+                    RoundedRectangle(cornerRadius: .widthSize(10))
+                        .stroke(.colorButtonSecond, lineWidth: 3)
+                )
                 .clipShape(.rect(cornerRadius: .widthSize(10)))
                 .onChange(of: code4) { newValue in
                     if newValue.count >= 1 {

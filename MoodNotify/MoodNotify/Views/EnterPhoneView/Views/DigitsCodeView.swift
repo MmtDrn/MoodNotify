@@ -20,13 +20,13 @@ struct DigitsCodeView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.colorButton)
+                .foregroundStyle(.colorButtonSecond)
                 .shadow(color: .white, radius: 5)
                 .padding(.top, .heightSize(50))
             
             Text("EnterOTP code we sent to +123213213. This code will expired in \(formatTime(remainingSeconds))".convertAttributed())
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.colorButton)
+                .foregroundStyle(.colorButtonSecond)
                 .padding(.horizontal, .widthSize(50))
             
            CodeInputView()
@@ -42,10 +42,6 @@ struct DigitsCodeView: View {
             
             Spacer()
         } //: VStack
-        .background(
-            LinearGradient(colors: [.colorWomen.opacity(0.8), .colorMan.opacity(0.8)], startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea()
-        )
         .onAppear {
             startTimer()
         }

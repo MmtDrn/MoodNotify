@@ -22,7 +22,7 @@ struct EnterPhoneNumberView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.colorButton)
+                .foregroundStyle(.colorButtonSecond)
                 .shadow(color: .white, radius: 5)
                 .padding(.top, .heightSize(50))
             
@@ -35,10 +35,10 @@ struct EnterPhoneNumberView: View {
                         .fontWeight(.semibold)
                         .padding(10)
                         .frame(minWidth: 80, minHeight: 47)
-                        .foregroundStyle(.colorButton)
+                        .foregroundStyle(.colorButtonSecond)
                         .background(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(.colorButton, lineWidth: 2)
+                                .stroke(.colorButtonSecond, lineWidth: 2)
                         )
                         .background(.white, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                         
@@ -56,11 +56,11 @@ struct EnterPhoneNumberView: View {
                     }
                     .padding(10)
                     .frame(minWidth: 80, minHeight: 47)
-                    .foregroundStyle(.colorButton)
+                    .foregroundStyle(.colorButtonSecond)
                     .fontWeight(.semibold)
                     .background(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(.colorButton, lineWidth: 2)
+                            .stroke(.colorButtonSecond, lineWidth: 2)
                     )
                     .background(.white, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                 
@@ -81,7 +81,6 @@ struct EnterPhoneNumberView: View {
         } //: VStack
         .animation(.easeInOut(duration: 0.6), value: keyIsFocused)
         .padding(.horizontal)
-        .background(LinearGradient(colors: [.colorWomen.opacity(0.8), .colorMan.opacity(0.8)], startPoint: .top, endPoint: .bottom))
         .sheet(isPresented: $presentSheet) {
             PickCPCodeView(presentSheet: $presentSheet, countryModel: $countryModel)
         }

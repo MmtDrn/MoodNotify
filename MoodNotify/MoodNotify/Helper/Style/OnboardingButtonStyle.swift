@@ -13,7 +13,7 @@ struct OnboardingButtonStyle: ButtonStyle {
         ZStack {
             RoundedRectangle(cornerRadius: .widthSize(30), style: .continuous )
                 .frame(height: .heightSize(49))
-                .foregroundColor(.colorButton)
+                .foregroundColor(.colorButtonSecond)
             
             configuration.label
                 .fontWeight(.semibold)
