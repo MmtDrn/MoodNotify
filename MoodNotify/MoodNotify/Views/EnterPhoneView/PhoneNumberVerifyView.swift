@@ -16,11 +16,17 @@ struct PhoneNumberVerifyView: View {
             case .phoneNumber:
                 EnterPhoneNumberView(step: $viewModel.step)
             case .code:
-                DigitsCodeView()
+                DigitsCodeView {
+                    viewModel.isPresented = true
+                }
             }
         }
         .onTapGesture {
             hideKeyboard()
+        }
+        .navigationDestination(isPresented: $viewModel.isPresented) {
+            UserAppearanceView()
+                .toolbarRole(.editor)
         }
     }
 }

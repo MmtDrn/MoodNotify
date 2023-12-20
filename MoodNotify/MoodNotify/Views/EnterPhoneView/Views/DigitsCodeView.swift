@@ -13,6 +13,8 @@ struct DigitsCodeView: View {
     @State private var timer: Timer?
     @State private var buttonTitle: String = "Continue"
     
+    var loginWithPhoneAction: () -> Void
+    
     // MARK: - Body
     var body: some View {
         VStack {
@@ -32,7 +34,7 @@ struct DigitsCodeView: View {
            CodeInputView()
             
             Button {
-                remainingSeconds = 120
+                loginWithPhoneAction()
             } label: {
                 Text(buttonTitle)
             }
@@ -67,5 +69,5 @@ struct DigitsCodeView: View {
 }
 
 #Preview {
-    DigitsCodeView()
+    DigitsCodeView(loginWithPhoneAction: {})
 }

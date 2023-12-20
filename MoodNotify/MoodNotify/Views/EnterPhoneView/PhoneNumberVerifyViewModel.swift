@@ -9,4 +9,5 @@ import Foundation
 
 class PhoneNumberVerifyViewModel: ObservableObject {
     @Published var step: VerifyPhoneStep = .phoneNumber
+    @Published var isPresented: Bool = false
 }
