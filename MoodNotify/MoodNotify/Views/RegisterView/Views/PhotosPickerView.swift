@@ -43,7 +43,7 @@ struct PhotosPickerView: View {
                     .padding(.horizontal, 20)
                     .padding(10)
                     .background(
-                        Color("ColorButton")
+                        Color.colorButtonSecond
                             .clipShape(.capsule)
                     )
                     .padding(.top, .heightSize(20))

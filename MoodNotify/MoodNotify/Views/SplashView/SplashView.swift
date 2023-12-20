@@ -21,6 +21,7 @@ struct SplashView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundStyle(LinearGradient(colors: [.colorMan.opacity(2), .colorWomen.opacity(2)], startPoint: .leading, endPoint: .trailing))
+                    .shadow(color: .colorWomen, radius: 2)
                 
                 CircleView()
                 
@@ -61,8 +62,10 @@ struct SplashView: View {
                 switch navigate {
                 case .login:
                     LoginView()
+                        .toolbarRole(.editor)
                 case .sign:
                     RegisterView()
+                        .toolbarRole(.editor)
                 }
             }
         } //: NavigationStack

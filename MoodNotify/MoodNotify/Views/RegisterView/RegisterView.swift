@@ -16,7 +16,7 @@ struct RegisterView: View {
             Text(viewModel.currentStep.title)
                 .font(.title2)
                 .fontWeight(.semibold)
-                .foregroundStyle(.colorButton)
+                .foregroundStyle(LinearGradient(colors: [.colorMan.opacity(2), .colorWomen.opacity(2)], startPoint: .leading, endPoint: .trailing))
                 .padding(.top, .heightSize(40))
             
             switch viewModel.currentStep {
@@ -34,14 +34,15 @@ struct RegisterView: View {
             
             StepButtonsView(currentStep: $viewModel.stepIndex)
             
-            StepBarView(lineColor: .colorButton, stepCount: RegisterStep.allCases.count, currentStep: $viewModel.stepIndex)
+            StepBarView(lineColor: .colorButtonSecond, stepCount: RegisterStep.allCases.count, currentStep: $viewModel.stepIndex)
                 .padding(.bottom, 30)
                 .padding(.horizontal)
             
             
         } //: VStack
-        .background(LinearGradient(colors: [.colorWomen.opacity(0.8), .colorMan.opacity(0.8)], startPoint: .top, endPoint: .bottom)
-            .ignoresSafeArea())
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 

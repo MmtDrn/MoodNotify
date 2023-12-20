@@ -12,15 +12,17 @@ struct LoginView: View {
     @ObservedObject private var viewModel = LoginViewModel()
     
     var body: some View {
-        VStack(spacing: .heightSize(20)) {
+        VStack(spacing: .heightSize(0)) {
             Text("MoodNotify")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(LinearGradient(colors: [.colorMan.opacity(2), .colorWomen.opacity(2)], startPoint: .leading, endPoint: .trailing))
                 .padding(.bottom, 50)
+                .shadow(color: .colorWomen, radius: 2)
+                .padding(.bottom, .heightSize(50))
             
             LoginOnboardingView()
-                .padding(.bottom, 100)
+                .padding(.bottom, .heightSize(50))
             
             Text("Choose Your Login Method and Be Notified")
                 .padding(.horizontal)
@@ -28,6 +30,7 @@ struct LoginView: View {
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(LinearGradient(colors: [.colorWomen.opacity(2), .colorMan.opacity(2)], startPoint: .leading, endPoint: .trailing))
+                .padding(.bottom, .heightSize(50))
             
             LoginButtonsView {
                 viewModel.loginWithPhone()
@@ -37,7 +40,7 @@ struct LoginView: View {
                 viewModel.loginWithGoogle()
             }
 
-        }
+        } //: VStack
     }
 }
 

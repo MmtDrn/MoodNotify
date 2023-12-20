@@ -24,7 +24,7 @@ struct StepButtonsView: View {
                     .padding()
                     .background(
                         Circle()
-                            .foregroundStyle(.colorButton)
+                            .foregroundStyle(.colorButtonSecond)
                     )
                     .animation(.easeIn(duration: 0.2), value: currentStep)
                     .opacity(currentStep == 0 ? 0 : 1)
@@ -44,7 +44,7 @@ struct StepButtonsView: View {
                     .padding()
                     .background(
                         Circle()
-                            .foregroundStyle(.colorButton)
+                            .foregroundStyle(.colorButtonSecond)
                     )
                     .animation(.easeIn(duration: 0.2), value: currentStep)
                     .opacity(currentStep == (stepCount - 1) ? 0 : 1)
