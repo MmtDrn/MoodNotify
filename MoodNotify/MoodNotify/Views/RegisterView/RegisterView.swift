@@ -32,7 +32,7 @@ struct RegisterView: View {
                 .foregroundStyle(LinearGradient(colors: [.colorMan.opacity(2), .colorWomen.opacity(2)], startPoint: .leading, endPoint: .trailing))
                 .padding(.bottom, .heightSize(50))
             
-            LoginButtonsView {
+            AuthButtonsView {
                 viewModel.navigateLogic(.phoneNumber)
             } loginWithAppleAction: {
                 viewModel.navigateLogic(.withApple)

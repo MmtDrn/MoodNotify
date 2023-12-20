@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B506E8672B1553D400921852 /* LoginButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506E8662B1553D400921852 /* LoginButtonsView.swift */; };
+		B506E8672B1553D400921852 /* AuthButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506E8662B1553D400921852 /* AuthButtonsView.swift */; };
 		B5289B6F2B1DE65E00E482FE /* PhotosPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5289B6E2B1DE65E00E482FE /* PhotosPickerView.swift */; };
 		B5289B712B1DEBC200E482FE /* PickPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5289B702B1DEBC200E482FE /* PickPhotoView.swift */; };
 		B533EC5B2B14C360005E6498 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */; };
@@ -70,7 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B506E8662B1553D400921852 /* LoginButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonsView.swift; sourceTree = "<group>"; };
+		B506E8662B1553D400921852 /* AuthButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonsView.swift; sourceTree = "<group>"; };
 		B5289B6E2B1DE65E00E482FE /* PhotosPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerView.swift; sourceTree = "<group>"; };
 		B5289B702B1DEBC200E482FE /* PickPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPhotoView.swift; sourceTree = "<group>"; };
 		B533EC5A2B14C360005E6498 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B533EC5D2B14C6A3005E6498 /* CircleView.swift */,
-				B506E8662B1553D400921852 /* LoginButtonsView.swift */,
+				B506E8662B1553D400921852 /* AuthButtonsView.swift */,
 				B5AE93232B2B036F00549577 /* LoginOnboardingView.swift */,
 			);
 			path = Views;
@@ -495,7 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54AF9C62B19D8340035BDBA /* NameBirthdayView.swift in Sources */,
-				B506E8672B1553D400921852 /* LoginButtonsView.swift in Sources */,
+				B506E8672B1553D400921852 /* AuthButtonsView.swift in Sources */,
 				B58CB8032B172598005EEB26 /* DigitsCodeView.swift in Sources */,
 				B55B02652B32E23A00FCDB13 /* UserAppearanceView.swift in Sources */,
 				B5C432592B1894B4000EDA16 /* StepBarView.swift in Sources */,

@@ -32,7 +32,7 @@ struct LoginView: View {
                 .foregroundStyle(LinearGradient(colors: [.colorWomen.opacity(2), .colorMan.opacity(2)], startPoint: .leading, endPoint: .trailing))
                 .padding(.bottom, .heightSize(50))
             
-            LoginButtonsView {
+            AuthButtonsView {
                 viewModel.loginWithPhone()
             } loginWithAppleAction: {
                 viewModel.loginWithApple()
