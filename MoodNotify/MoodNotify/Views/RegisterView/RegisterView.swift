@@ -21,7 +21,7 @@ struct RegisterView: View {
                 .shadow(color: .colorWomen, radius: 2)
                 .padding(.bottom, .heightSize(50))
             
-            LoginOnboardingView()
+            RegisterMidView()
                 .padding(.bottom, .heightSize(50))
             
             Text("Choose Your Signin Method and Be Notified")
