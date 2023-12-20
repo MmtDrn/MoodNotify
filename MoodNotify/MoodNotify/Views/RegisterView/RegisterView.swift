@@ -54,10 +54,10 @@ struct RegisterView: View {
                 PhoneNumberVerifyView()
                     .toolbarRole(.editor)
             case .withApple:
-                Text("withApple")
+                UserAppearanceView()
                     .toolbarRole(.editor)
             case .withGoogle:
-                Text("withGoogle")
+                UserAppearanceView()
                     .toolbarRole(.editor)
             case .none:
                 EmptyView()
@@ -67,5 +67,7 @@ struct RegisterView: View {
 }
 
 #Preview {
-    RegisterView()
+    NavigationStack {
+        RegisterView()
+    }
 }

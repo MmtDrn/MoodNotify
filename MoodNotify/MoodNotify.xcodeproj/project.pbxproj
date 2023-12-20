@@ -26,6 +26,8 @@
 		B5546DBD2B15F167007CE5B4 /* PickCPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */; };
 		B5546DC22B1613E5007CE5B4 /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5546DC12B1613E5007CE5B4 /* OnboardingButtonStyle.swift */; };
 		B55A6D072B1CA9D800A7CCEA /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A6D062B1CA9D800A7CCEA /* InterestView.swift */; };
+		B55B02652B32E23A00FCDB13 /* UserAppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55B02642B32E23A00FCDB13 /* UserAppearanceView.swift */; };
+		B55B02672B32E25A00FCDB13 /* UserAppearanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55B02662B32E25A00FCDB13 /* UserAppearanceViewModel.swift */; };
 		B5758CB22B3212E300DAE628 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5758CB12B3212E300DAE628 /* LoginViewModel.swift */; };
 		B58CB8032B172598005EEB26 /* DigitsCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8022B172598005EEB26 /* DigitsCodeView.swift */; };
 		B58CB8052B17391E005EEB26 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58CB8042B17391E005EEB26 /* CodeInputView.swift */; };
@@ -84,6 +86,8 @@
 		B5546DBC2B15F167007CE5B4 /* PickCPCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickCPCodeView.swift; sourceTree = "<group>"; };
 		B5546DC12B1613E5007CE5B4 /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		B55A6D062B1CA9D800A7CCEA /* InterestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
+		B55B02642B32E23A00FCDB13 /* UserAppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAppearanceView.swift; sourceTree = "<group>"; };
+		B55B02662B32E25A00FCDB13 /* UserAppearanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAppearanceViewModel.swift; sourceTree = "<group>"; };
 		B5758CB12B3212E300DAE628 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B58CB8022B172598005EEB26 /* DigitsCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsCodeView.swift; sourceTree = "<group>"; };
 		B58CB8042B17391E005EEB26 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
@@ -182,9 +186,19 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		B55B02632B32E21B00FCDB13 /* UserAppearance */ = {
+			isa = PBXGroup;
+			children = (
+				B55B02642B32E23A00FCDB13 /* UserAppearanceView.swift */,
+				B55B02662B32E25A00FCDB13 /* UserAppearanceViewModel.swift */,
+			);
+			path = UserAppearance;
+			sourceTree = "<group>";
+		};
 		B58CB7FD2B17172D005EEB26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B55B02632B32E21B00FCDB13 /* UserAppearance */,
 				B5AE93202B2AF2B000549577 /* SplashView */,
 				B5C432522B186873000EDA16 /* RegisterView */,
 				B58CB7FE2B171751005EEB26 /* EnterPhoneView */,
@@ -466,6 +480,7 @@
 				B54AF9C62B19D8340035BDBA /* NameBirthdayView.swift in Sources */,
 				B506E8672B1553D400921852 /* LoginButtonsView.swift in Sources */,
 				B58CB8032B172598005EEB26 /* DigitsCodeView.swift in Sources */,
+				B55B02652B32E23A00FCDB13 /* UserAppearanceView.swift in Sources */,
 				B5C432592B1894B4000EDA16 /* StepBarView.swift in Sources */,
 				B58CB8072B1758E8005EEB26 /* EnterPhoneNumberView.swift in Sources */,
 				B54AF9C82B19E3FB0035BDBA /* GenderView.swift in Sources */,
@@ -489,6 +504,7 @@
 				B5546DB02B15E51C007CE5B4 /* PhoneNumberVerifyView.swift in Sources */,
 				B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */,
 				B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */,
+				B55B02672B32E25A00FCDB13 /* UserAppearanceViewModel.swift in Sources */,
 				B5518E832B1F497A003FF8DB /* RegisterViewModel.swift in Sources */,
 				B5289B712B1DEBC200E482FE /* PickPhotoView.swift in Sources */,
 				B5C432562B187D2C000EDA16 /* RegisterStep.swift in Sources */,

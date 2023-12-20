@@ -9,14 +9,6 @@ import SwiftUI
 
 class RegisterViewModel: ObservableObject {
     // MARK: - Properties
-    @Published var currentStep: RegisterStep = .nameBirthday
-    @Published var stepIndex: Int = 0 {
-        didSet {
-            guard let newStep = RegisterStep(rawValue: stepIndex) else { return }
-            currentStep = newStep
-        }
-    }
-    
     @Published var isPresented: Bool = false
     var navigateCase: RegisterNavigate?
     
