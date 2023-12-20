@@ -12,7 +12,7 @@ struct LoginView: View {
     @ObservedObject private var viewModel = LoginViewModel()
     
     var body: some View {
-        VStack(spacing: .heightSize(0)) {
+        VStack(spacing: 0) {
             Text("MoodNotify")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -41,6 +41,8 @@ struct LoginView: View {
             }
 
         } //: VStack
+        .navigationTitle(Text("Login"))
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

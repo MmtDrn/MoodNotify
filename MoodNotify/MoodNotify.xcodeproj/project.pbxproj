@@ -150,7 +150,6 @@
 				B533EC5D2B14C6A3005E6498 /* CircleView.swift */,
 				B506E8662B1553D400921852 /* LoginButtonsView.swift */,
 				B5AE93232B2B036F00549577 /* LoginOnboardingView.swift */,
-				B5758CB12B3212E300DAE628 /* LoginViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +327,7 @@
 			children = (
 				B533EC5C2B14C698005E6498 /* Views */,
 				B5E30D4D2B1495E100F10B4D /* LoginView.swift */,
+				B5758CB12B3212E300DAE628 /* LoginViewModel.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
