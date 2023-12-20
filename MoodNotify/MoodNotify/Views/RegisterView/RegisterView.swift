@@ -5,12 +5,6 @@
 //  Created by mehmet duran on 30.11.2023.
 //
 
-enum RegisterNavigate {
-    case phoneNumber
-    case withApple
-    case withGoogle
-}
-
 import SwiftUI
 
 struct RegisterView: View {

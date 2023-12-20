@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-enum SplashNavigate {
-    case login
-    case sign
-}
-
 struct SplashView: View {
     
     var body: some View {
