@@ -195,10 +195,26 @@
 		B55B02632B32E21B00FCDB13 /* UserAppearance */ = {
 			isa = PBXGroup;
 			children = (
+				B55B026E2B32F1D900FCDB13 /* Views */,
 				B55B02642B32E23A00FCDB13 /* UserAppearanceView.swift */,
 				B55B02662B32E25A00FCDB13 /* UserAppearanceViewModel.swift */,
 			);
 			path = UserAppearance;
+			sourceTree = "<group>";
+		};
+		B55B026E2B32F1D900FCDB13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5C432582B1894B4000EDA16 /* StepBarView.swift */,
+				B5C4325A2B189AD9000EDA16 /* StepButtonsView.swift */,
+				B54AF9C52B19D8340035BDBA /* NameBirthdayView.swift */,
+				B54AF9C72B19E3FB0035BDBA /* GenderView.swift */,
+				B54AF9CB2B1A132C0035BDBA /* InterestItemView.swift */,
+				B55A6D062B1CA9D800A7CCEA /* InterestView.swift */,
+				B5289B6E2B1DE65E00E482FE /* PhotosPickerView.swift */,
+				B5289B702B1DEBC200E482FE /* PickPhotoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B58CB7FD2B17172D005EEB26 /* Views */ = {
@@ -266,14 +282,6 @@
 		B5C432572B1893C5000EDA16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B5C432582B1894B4000EDA16 /* StepBarView.swift */,
-				B5C4325A2B189AD9000EDA16 /* StepButtonsView.swift */,
-				B54AF9C52B19D8340035BDBA /* NameBirthdayView.swift */,
-				B54AF9C72B19E3FB0035BDBA /* GenderView.swift */,
-				B54AF9CB2B1A132C0035BDBA /* InterestItemView.swift */,
-				B55A6D062B1CA9D800A7CCEA /* InterestView.swift */,
-				B5289B6E2B1DE65E00E482FE /* PhotosPickerView.swift */,
-				B5289B702B1DEBC200E482FE /* PickPhotoView.swift */,
 				B55B026C2B32ECB300FCDB13 /* RegisterMidView.swift */,
 			);
 			path = Views;
