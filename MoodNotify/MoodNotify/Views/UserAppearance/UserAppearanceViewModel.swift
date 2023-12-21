@@ -32,4 +32,5 @@ class UserAppearanceViewModel: ObservableObject {
     }
     
     // MARK: - Logics
+    func register() { }
 }

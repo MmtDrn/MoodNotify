@@ -9,13 +9,13 @@ import SwiftUI
 
 struct StepButtonsView: View {
     // MARK: - Properties
-    @Binding var currentStep: Int
     private let stepCount: Int = RegisterStep.allCases.count
+    @ObservedObject var viewModel: UserAppearanceViewModel
     
     var body: some View {
         HStack {
             Button(action: {
-                currentStep -= 1
+                viewModel.stepIndex -= 1
             }, label: {
                 Image(systemName: "arrow.left")
                     .foregroundStyle(.white)
@@ -26,18 +26,45 @@ struct StepButtonsView: View {
                         Circle()
                             .foregroundStyle(.colorButtonSecond)
                     )
-                    .animation(.easeIn(duration: 0.2), value: currentStep)
-                    .opacity(currentStep == 0 ? 0 : 1)
+                    .animation(.easeIn(duration: 0.2), value: viewModel.stepIndex)
+                    .opacity(viewModel.stepIndex == 0 ? 0 : 1)
             })
-            .disabled(currentStep == 0)
+            .disabled(viewModel.stepIndex == 0)
             .padding()
             
             Spacer()
             
             Button(action: {
-                currentStep += 1
+                switch RegisterStep(rawValue: viewModel.stepIndex) {
+                    
+                case .nameBirthday:
+                    if viewModel.name != "" {
+                        viewModel.stepIndex += 1
+                    } else {
+                        viewModel.fullNameShake = true
+                    }
+                case .gender:
+                    if let _ = viewModel.genderType {
+                        viewModel.stepIndex += 1
+                    } else {
+                        viewModel.genderTypeShake = true
+                    }
+                case .interest:
+                    if viewModel.interests.count != 5 {
+                        viewModel.interestsShake = true
+                    } else {
+                        viewModel.stepIndex += 1
+                    }
+                case .photos:
+                    if viewModel.images.count == 0 {
+                        viewModel.imagesURLShake = true
+                    } else {
+                        viewModel.register()
+                    }
+                default: break
+                }
             }, label: {
-                Image(systemName: "arrow.right")
+                Image(systemName: viewModel.stepIndex == (stepCount - 1) ? "checkmark" : "arrow.right")
                     .foregroundStyle(.white)
                     .font(.title)
                     .fontWeight(.bold)
@@ -46,15 +73,15 @@ struct StepButtonsView: View {
                         Circle()
                             .foregroundStyle(.colorButtonSecond)
                     )
-                    .animation(.easeIn(duration: 0.2), value: currentStep)
-                    .opacity(currentStep == (stepCount - 1) ? 0 : 1)
+                    .animation(.easeIn(duration: 0.2), value: viewModel.stepIndex)
+//                    .opacity(viewModel.stepIndex == (stepCount - 1) ? 0 : 1)
             })
-            .disabled(currentStep == (stepCount - 1))
+//            .disabled(viewModel.stepIndex == (stepCount - 1))
             .padding()
         }
     }
 }
 
 #Preview {
-    StepButtonsView(currentStep: .constant(2))
+    StepButtonsView(viewModel: UserAppearanceViewModel())
 }
