@@ -12,6 +12,8 @@ struct GenderView: View {
     @State var genderMan: Bool = false
     @State var genderWomen: Bool = false
     
+    @ObservedObject var viewModel: UserAppearanceViewModel
+    
     // MARK: - Body
     var body: some View {
         HStack(spacing: .widthSize(16)) {
@@ -48,6 +50,7 @@ struct GenderView: View {
             .onTapGesture {
                 genderWomen = true
                 genderMan = false
+                viewModel.genderType = 0
             }
             
             ZStack {
@@ -83,12 +86,22 @@ struct GenderView: View {
             .onTapGesture {
                 genderWomen = false
                 genderMan = true
+                viewModel.genderType = 1
             }
         }
         .padding(.top, .heightSize(30))
+        .shake($viewModel.genderTypeShake)
+        .onAppear {
+            guard let gender = viewModel.genderType else { return }
+            if gender == 0 {
+                genderWomen = true
+            } else {
+                genderMan = true
+            }
+        }
     }
 }
 
-#Preview {
-    GenderView()
-}
+//#Preview {
+//    GenderView()
+//}

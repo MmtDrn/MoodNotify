@@ -9,12 +9,11 @@ import SwiftUI
 
 struct NameBirthdayView: View {
     // MARK: - Properties
-    @State var name: String = ""
-    @State private var date = Date()
+    @ObservedObject var viewModel: UserAppearanceViewModel
     
     // MARK: - Body
     var body: some View {
-        TextField("", text: $name, prompt: Text("Your name"))
+        TextField("", text: $viewModel.name, prompt: Text("Your name"))
             .foregroundStyle(.colorButtonSecond)
             .fontWeight(.semibold)
             .padding(10)
@@ -25,9 +24,10 @@ struct NameBirthdayView: View {
             )
             .background(.white, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
             .padding()
+            .shake($viewModel.fullNameShake)
         
         
-        DatePicker("", selection: $date, displayedComponents: [.date])
+        DatePicker("", selection: $viewModel.date, displayedComponents: [.date])
             .foregroundStyle(.colorButtonSecond)
             .fontWeight(.semibold)
             .padding(10)
@@ -38,9 +38,10 @@ struct NameBirthdayView: View {
             )
             .background(.white, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
             .padding(.horizontal)
+            .shake($viewModel.birthdayShake)
     }
 }
 
-#Preview {
-    NameBirthdayView()
-}
+//#Preview {
+//    NameBirthdayView(name: .constant(""), date: .constant(Date()))
+//}
