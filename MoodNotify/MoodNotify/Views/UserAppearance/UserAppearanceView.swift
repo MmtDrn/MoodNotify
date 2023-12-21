@@ -19,18 +19,18 @@ struct UserAppearanceView: View {
             
             switch viewModel.currentStep {
             case .nameBirthday:
-                NameBirthdayView()
+                NameBirthdayView(viewModel: viewModel)
             case .gender:
-                GenderView()
+                GenderView(viewModel: viewModel)
             case .interest:
-                InterestView()
+                InterestView(viewModel: viewModel)
             case .photos:
-               PhotosPickerView()
+               PhotosPickerView(viewModel: viewModel)
             }
             
             Spacer()
             
-            StepButtonsView(currentStep: $viewModel.stepIndex)
+            StepButtonsView(viewModel: viewModel)
             
             StepBarView(lineColor: .colorButtonSecond, stepCount: RegisterStep.allCases.count, currentStep: $viewModel.stepIndex)
                 .padding(.bottom, 30)

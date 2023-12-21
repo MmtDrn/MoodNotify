@@ -9,6 +9,19 @@ import Foundation
 
 class UserAppearanceViewModel: ObservableObject {
     // MARK: - Properties
+    
+    @Published var fullNameShake = false
+    @Published var birthdayShake = false
+    @Published var genderTypeShake = false
+    @Published var interestsShake = false
+    @Published var imagesURLShake = false
+    
+    var name: String = ""
+    var date = Date()
+    var genderType: Int?
+    @Published var interests = [InterestsModel]()
+    
+    
     @Published var currentStep: RegisterStep = .nameBirthday
     @Published var stepIndex: Int = 0 {
         didSet {
