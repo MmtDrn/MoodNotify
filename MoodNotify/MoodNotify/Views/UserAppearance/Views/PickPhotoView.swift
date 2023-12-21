@@ -24,6 +24,23 @@ struct PickPhotoView: View {
                     Color.colorGenderBackground
                         .clipShape(.rect(cornerRadius: .widthSize(20)))
                 )
+                .overlay(alignment: .topTrailing) {
+                    Button(action: {
+                        images.remove(at: index)
+                    }, label: {
+                        Image(systemName: "minus")
+                            .font(index == 0 ? .title : .title2)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                            .padding(.vertical, 2)
+                            .padding(.horizontal, 4)
+                            .background(
+                                Color.secondary
+                                    .clipShape(.capsule)
+                            )
+                            .padding(index == 0 ? 12 : 8)
+                    })
+                }
         } else {
             Color.colorGenderBackground
                 .clipShape(.rect(cornerRadius: .widthSize(20)))
@@ -42,8 +59,9 @@ struct PickPhotoView: View {
                 }
         }
     }
+    
 }
 
-//#Preview {
-//    PickPhotoView(image: .constant(UIImage()))
-//}
+#Preview {
+    PickPhotoView(images: .constant([.eric, .lara]), index: 0)
+}

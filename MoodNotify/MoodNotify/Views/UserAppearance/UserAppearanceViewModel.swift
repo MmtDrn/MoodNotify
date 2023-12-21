@@ -5,7 +5,7 @@
 //  Created by mehmet duran on 20.12.2023.
 //
 
-import Foundation
+import UIKit
 
 class UserAppearanceViewModel: ObservableObject {
     // MARK: - Properties
@@ -20,6 +20,7 @@ class UserAppearanceViewModel: ObservableObject {
     var date = Date()
     var genderType: Int?
     @Published var interests = [InterestsModel]()
+    @Published var images: [UIImage] = []
     
     
     @Published var currentStep: RegisterStep = .nameBirthday

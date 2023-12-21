@@ -11,27 +11,27 @@ import PhotosUI
 struct PhotosPickerView: View {
     // MARK: - Properties
     @State private var selectedItems: [PhotosPickerItem] = []
-    @State private var images: [UIImage] = []
+    @ObservedObject var viewModel: UserAppearanceViewModel
     
     // MARK: - Body
     var body: some View {
         VStack {
             HStack {
-                PickPhotoView(images: $images, index: 0)
+                PickPhotoView(images: $viewModel.images, index: 0)
                 
                 VStack {
-                    PickPhotoView(images: $images, index: 1)
+                    PickPhotoView(images: $viewModel.images, index: 1)
                     
-                    PickPhotoView(images: $images, index: 2)
+                    PickPhotoView(images: $viewModel.images, index: 2)
                 }
             }
             
             HStack {
-                PickPhotoView(images: $images, index: 3)
+                PickPhotoView(images: $viewModel.images, index: 3)
                 
-                PickPhotoView(images: $images, index: 4)
+                PickPhotoView(images: $viewModel.images, index: 4)
                 
-                PickPhotoView(images: $images, index: 5)
+                PickPhotoView(images: $viewModel.images, index: 5)
             }
             
             PhotosPicker(selection: $selectedItems, maxSelectionCount: 6, matching: .images) {
@@ -48,16 +48,17 @@ struct PhotosPickerView: View {
                     )
                     .padding(.top, .heightSize(20))
             }
+            .shake($viewModel.imagesURLShake)
         }
         .onChange(of: selectedItems) { newValue in
             Task {
                 selectedItems = []
-                images = []
+                viewModel.images = []
                 
                 for item in newValue {
                     if let data = try? await item.loadTransferable(type: Data.self),
                        let image = UIImage(data: data) {
-                        images.append(image)
+                        viewModel.images.append(image)
                     }
                 }
             }
@@ -66,5 +67,5 @@ struct PhotosPickerView: View {
 }
 
 #Preview {
-    PhotosPickerView()
+    PhotosPickerView(viewModel: UserAppearanceViewModel())
 }
