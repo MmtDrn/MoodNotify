@@ -28,39 +28,24 @@ struct SplashView: View {
                     .foregroundStyle(LinearGradient(colors: [.colorWomen.opacity(2), .colorMan.opacity(2)], startPoint: .leading, endPoint: .trailing))
                     .padding(.vertical)
                 
-                VStack(spacing: 15) {
-                    NavigationLink(value: SplashNavigate.login) {
-                        Text("Login")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.white)
-                            .frame(width: .widthSize(320), height: .heightSize(45))
-                            .padding(.vertical, 5)
-                            .background(.colorButtonSecond)
-                            .clipShape(.capsule)
-                    }
-                    
-                    NavigationLink(value: SplashNavigate.sign) {
-                        Text("Sign In")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.colorButtonSecond)
-                            .frame(width: .widthSize(320), height: .heightSize(45))
-                            .padding(.vertical, 5)
-                            .background(.colorButtonThird.opacity(0.7))
-                            .clipShape(.capsule)
-                    }
-                } //: Links
+                NavigationLink(value: SplashNavigate.sign) {
+                    Text("Continue")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.white)
+                        .frame(width: .widthSize(320), height: .heightSize(45))
+                        .padding(.vertical, 5)
+                        .background(.colorButtonSecond)
+                        .clipShape(.capsule)
+                }
                 .padding(.top)
             } //: VStack
             .navigationDestination(for: SplashNavigate.self) { navigate in
                 switch navigate {
                 case .login:
                     LoginView()
-                        .toolbarRole(.editor)
                 case .sign:
                     RegisterView()
-                        .toolbarRole(.editor)
                 }
             }
         } //: NavigationStack
