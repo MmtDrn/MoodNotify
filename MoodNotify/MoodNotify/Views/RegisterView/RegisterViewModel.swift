@@ -30,8 +30,6 @@ class RegisterViewModel: ObservableObject {
         self.navigateCase = navigateCase
         
         switch navigateCase {
-        case .phoneNumber:
-            registerWithPhone()
         case .withApple:
             registerWithApple()
         case .withGoogle:

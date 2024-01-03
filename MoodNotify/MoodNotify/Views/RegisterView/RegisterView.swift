@@ -32,21 +32,15 @@ struct RegisterView: View {
                 .foregroundStyle(LinearGradient(colors: [.colorMan.opacity(2), .colorWomen.opacity(2)], startPoint: .leading, endPoint: .trailing))
                 .padding(.bottom, .heightSize(50))
             
-            AuthButtonsView {
-                viewModel.navigateLogic(.phoneNumber)
-            } loginWithAppleAction: {
+            AuthButtonsView  {
                 viewModel.navigateLogic(.withApple)
             } loginWithGooleAction: {
                 viewModel.navigateLogic(.withGoogle)
             }
         } //: VStack
-        .navigationTitle(Text("Sign In"))
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
         .navigationDestination(isPresented: $viewModel.isPresented) {
             switch viewModel.navigateCase {
-            case .phoneNumber:
-                PhoneNumberVerifyView()
-                    .toolbarRole(.editor)
             case .withApple:
                 UserAppearanceView()
                     .toolbarRole(.editor)

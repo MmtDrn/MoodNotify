@@ -69,7 +69,7 @@ struct RegisterMidView: View {
                         .foregroundStyle(.white)
                         .shadow(radius: 5)
                         .overlay {
-                            Text("🎬")
+                            Text("🥰")
                                 .font(.title)
                                 .padding(.bottom)
                         }

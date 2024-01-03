@@ -8,7 +8,6 @@
 import Foundation
 
 enum RegisterNavigate {
-    case phoneNumber
     case withApple
     case withGoogle
 }
