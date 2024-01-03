@@ -9,34 +9,12 @@ import SwiftUI
 
 struct AuthButtonsView: View {
     
-    var loginWithPhoneAction: () -> Void
     var loginWithAppleAction: () -> Void
     var loginWithGooleAction: () -> Void
     
     
     var body: some View {
         VStack(spacing: .heightSize(15)) {
-            
-            Button(action: {
-                loginWithPhoneAction()
-            }) {
-                Image(systemName: "phone.circle")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.colorButtonSecond)
-                
-                Text("Phone Number")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.colorButtonSecond)
-            }
-            .frame(width: .widthSize(260))
-            .padding(.horizontal)
-            .padding(.vertical, 5)
-            .background(
-                RoundedRectangle(cornerRadius: 40)
-                    .stroke(.colorButtonSecond, lineWidth: 3)
-            )
             
             Button(action: {
                 loginWithAppleAction()
