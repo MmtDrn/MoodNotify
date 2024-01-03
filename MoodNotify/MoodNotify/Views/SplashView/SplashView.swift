@@ -27,8 +27,8 @@ struct SplashView: View {
                     .multilineTextAlignment(.center)
                     .foregroundStyle(LinearGradient(colors: [.colorWomen.opacity(2), .colorMan.opacity(2)], startPoint: .leading, endPoint: .trailing))
                     .padding(.vertical)
-                
-                NavigationLink(value: SplashNavigate.sign) {
+                                
+                NavigationLink(destination: AuthView()) {
                     Text("Continue")
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -40,14 +40,6 @@ struct SplashView: View {
                 }
                 .padding(.top)
             } //: VStack
-            .navigationDestination(for: SplashNavigate.self) { navigate in
-                switch navigate {
-                case .login:
-                    LoginView()
-                case .sign:
-                    AuthView()
-                }
-            }
         } //: NavigationStack
     }
 }

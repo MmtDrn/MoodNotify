@@ -10,7 +10,7 @@ import SwiftUI
 class AuthViewModel: ObservableObject {
     // MARK: - Properties
     @Published var isPresented: Bool = false
-    var navigateCase: RegisterNavigate?
+    var navigateCase: AuthNavigate?
     
     // MARK: - Logics
     private func authWithApple() {
@@ -21,7 +21,7 @@ class AuthViewModel: ObservableObject {
         print("loginWithGoogle")
     }
     
-    func navigateLogic(_ navigateCase: RegisterNavigate) {
+    func navigateLogic(_ navigateCase: AuthNavigate) {
         self.isPresented = true
         self.navigateCase = navigateCase
         

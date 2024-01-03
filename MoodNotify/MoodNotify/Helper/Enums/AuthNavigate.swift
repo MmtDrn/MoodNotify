@@ -1,5 +1,5 @@
 //
-//  SplashNavigate.swift
+//  AuthNavigate.swift
 //  MoodNotify
 //
 //  Created by mehmet duran on 20.12.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SplashNavigate {
-    case login
-    case sign
+enum AuthNavigate {
+    case withApple
+    case withGoogle
 }
