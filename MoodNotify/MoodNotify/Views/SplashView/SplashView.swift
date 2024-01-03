@@ -45,7 +45,7 @@ struct SplashView: View {
                 case .login:
                     LoginView()
                 case .sign:
-                    RegisterView()
+                    AuthView()
                 }
             }
         } //: NavigationStack
