@@ -36,7 +36,7 @@ struct SplashView: View {
                         .frame(width: .widthSize(320), height: .heightSize(45))
                         .padding(.vertical, 5)
                         .background(.colorButtonSecond)
-                        .clipShape(.capsule)
+                        .clipShape(.rect(cornerRadius: 10))
                 }
                 .padding(.top)
             } //: VStack
