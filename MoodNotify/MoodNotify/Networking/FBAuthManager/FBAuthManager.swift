@@ -45,8 +45,8 @@ class FBAuthManager: FBAuthManagerProtocol {
            
             
             do {
-                let _ = try await Auth.auth().signIn(with: credential)
-                #warning("user uid will set to keychain")
+                let result = try await Auth.auth().signIn(with: credential)
+                TokenManager.shared.token = result.user.uid
                 return .success(true)
             } catch {
                 return .failure(.notAuth)
@@ -83,8 +83,8 @@ class FBAuthManager: FBAuthManagerProtocol {
                                                              fullName: appleIDCredential.fullName)
                 
              do {
-                 let _ = try await Auth.auth().signIn(with: credential)
-                 #warning("user uid will set to keychain")
+                 let result = try await Auth.auth().signIn(with: credential)
+                 TokenManager.shared.token = result.user.uid
                  return .success(true)
              }
              catch {
