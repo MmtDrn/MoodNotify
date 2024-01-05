@@ -75,6 +75,7 @@
 		B5E30D692B1495E400F10B4D /* MoodNotifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E30D682B1495E400F10B4D /* MoodNotifyUITestsLaunchTests.swift */; };
 		B5ED4CD82B47F79F0065064C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B5ED4CD72B47F79F0065064C /* KeychainAccess */; };
 		B5ED4CDB2B47F7CA0065064C /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED4CDA2B47F7CA0065064C /* TokenManager.swift */; };
+		B5ED4CDD2B4801B30065064C /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED4CDC2B4801B30065064C /* AuthError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		B5E30D682B1495E400F10B4D /* MoodNotifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodNotifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B5E8D5932B46BCCE004603AF /* MoodNotify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoodNotify.entitlements; sourceTree = "<group>"; };
 		B5ED4CDA2B47F7CA0065064C /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		B5ED4CDC2B4801B30065064C /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 				B58CB8092B17623F005EEB26 /* VerifyPhoneStep.swift */,
 				B5C432552B187D2C000EDA16 /* RegisterStep.swift */,
 				B55B02682B32EA9A00FCDB13 /* AuthNavigate.swift */,
+				B5ED4CDC2B4801B30065064C /* AuthError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				B5E30D4C2B1495E100F10B4D /* MoodNotifyApp.swift in Sources */,
 				B58CB80C2B176FFC005EEB26 /* String+Ext.swift in Sources */,
 				B55B02672B32E25A00FCDB13 /* UserAppearanceViewModel.swift in Sources */,
+				B5ED4CDD2B4801B30065064C /* AuthError.swift in Sources */,
 				B5518E832B1F497A003FF8DB /* AuthViewModel.swift in Sources */,
 				B5289B712B1DEBC200E482FE /* PickPhotoView.swift in Sources */,
 				B5C432562B187D2C000EDA16 /* RegisterStep.swift in Sources */,
