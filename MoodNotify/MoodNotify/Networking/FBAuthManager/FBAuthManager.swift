@@ -20,9 +20,9 @@ class FBAuthManager: FBAuthManagerProtocol {
     
     private var currentNonce: String?
     
-    func authWithGoogle() async -> Bool {
+    func authWithGoogle() async -> (Result<Bool,AuthError>) {
         guard let clientID = FirebaseApp.app()?.options.clientID else {
-            return false
+            return .failure(.notClientID)
         }
         
         let config = GIDConfiguration(clientID: clientID)
@@ -30,26 +30,31 @@ class FBAuthManager: FBAuthManagerProtocol {
         
         guard let windowScene = await UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let window = await windowScene.windows.first,
-              let rootViewController = await window.rootViewController else { return false }
+              let rootViewController = await window.rootViewController else { return .failure(.notWindowScene) }
         
         do {
             let userAuth = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
             let user = userAuth.user
             
             let accessToken = user.accessToken
-            guard let idToken = user.idToken else { return false }
+            guard let idToken = user.idToken else { return .failure(.notIDToken) }
             
             let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString,
                                                            accessToken: accessToken.tokenString)
             
-            let result = try await Auth.auth().signIn(with: credential)
-            #warning("user uid will set to keychain")
+           
+            
+            do {
+                let _ = try await Auth.auth().signIn(with: credential)
+                #warning("user uid will set to keychain")
+                return .success(true)
+            } catch {
+                return .failure(.notAuth)
+            }
         } catch {
             print(error.localizedDescription)
-            return false
+            return .failure(.notAuth)
         }
-        
-        return true
     }
     
     func handleSignInWithAppleRequest(_ request: ASAuthorizationOpenIDRequest) {
@@ -58,41 +63,39 @@ class FBAuthManager: FBAuthManagerProtocol {
         request.nonce = sha256(nonce)
     }
     
-    func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) async -> Bool {
+    func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) async -> (Result<Bool,AuthError>) {
         
         switch result {
         case .success(let success):
             if let appleIDCredential = success.credential as? ASAuthorizationAppleIDCredential {
               guard let nonce = currentNonce else {
-                return false
+                  return .failure(.notNonce)
               }
               guard let appleIDToken = appleIDCredential.identityToken else {
-                  return false
+                  return .failure(.notAppleIDToken)
               }
               guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                  return false
+                  return .failure(.notIDToken)
               }
 
               let credential = OAuthProvider.appleCredential(withIDToken: idTokenString,
                                                              rawNonce: nonce,
                                                              fullName: appleIDCredential.fullName)
                 
-              Task {
-                do {
-                    let result = try await Auth.auth().signIn(with: credential)
-                    #warning("user uid will set to keychain")
-                }
-                catch {
-                    print("Error authenticating: \(error.localizedDescription)")
-                }
-              }
-            }
+             do {
+                 let _ = try await Auth.auth().signIn(with: credential)
+                 #warning("user uid will set to keychain")
+                 return .success(true)
+             }
+             catch {
+                 print("Error authenticating: \(error.localizedDescription)")
+                 return .failure(.notAuth)
+             }
+            } else { return .failure(.appleIDCredential) }
         case .failure(let failure):
             print(failure.localizedDescription)
-            return false
+            return .failure(.notAuth)
         }
-        
-        return true
     }
     
     func signout() -> Bool {

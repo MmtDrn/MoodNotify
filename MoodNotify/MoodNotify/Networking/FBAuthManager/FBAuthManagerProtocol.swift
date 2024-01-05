@@ -9,8 +9,8 @@ import Foundation
 import AuthenticationServices
 
 protocol FBAuthManagerProtocol {
-    func authWithGoogle() async -> Bool
+    func authWithGoogle() async -> (Result<Bool,AuthError>)
     func signout() -> Bool
     func handleSignInWithAppleRequest(_ request: ASAuthorizationOpenIDRequest)
-    func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) async -> Bool
+    func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) async -> (Result<Bool,AuthError>)
 }
