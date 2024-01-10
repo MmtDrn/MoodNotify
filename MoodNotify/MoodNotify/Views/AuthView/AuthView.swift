@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import _AuthenticationServices_SwiftUI
 
 struct AuthView: View {
-    @ObservedObject private var viewModel = AuthViewModel()
+    @ObservedObject private var viewModel = AuthViewModel(authManager: FBAuthManager.shared)
     
     // MARK: - Body
     var body: some View {
@@ -32,10 +33,14 @@ struct AuthView: View {
                 .foregroundStyle(LinearGradient(colors: [.colorMan.opacity(2), .colorWomen.opacity(2)], startPoint: .leading, endPoint: .trailing))
                 .padding(.bottom, .heightSize(50))
             
-            AuthButtonsView  {
-                viewModel.navigateLogic(.withApple)
-            } loginWithGooleAction: {
-                viewModel.navigateLogic(.withGoogle)
+            AuthButtonsView {
+                Task {
+                    await viewModel.authWithGoogle()
+                }
+            } handleAppleRequest: { request in
+                viewModel.handleSignInWithAppleRequest(request)
+            } handleAppleCompletion: { result in
+                viewModel.handleSignInWithAppleCompletion(result)
             }
         } //: VStack
         .navigationBarBackButtonHidden()

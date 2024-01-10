@@ -39,7 +39,7 @@ struct AuthButtonsView: View {
                 Text("Contuniue with Google")
                     .font(.title2)
                     .fontWeight(.semibold)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.black)
             }
             .frame(maxWidth: .infinity)
             .frame(height: .heightSize(58))

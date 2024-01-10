@@ -6,19 +6,51 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 class AuthViewModel: ObservableObject {
     // MARK: - Properties
     @Published var isPresented: Bool = false
     var navigateCase: AuthNavigate?
     
-    // MARK: - Logics
-    private func authWithApple() {
-        print("loginWithApple")
+    var authManager: FBAuthManagerProtocol
+    
+    init(authManager: FBAuthManagerProtocol) {
+        self.authManager = authManager
     }
     
-    private func authWithGoogle() {
-        print("loginWithGoogle")
+    func authWithGoogle() async {
+        Task {
+            let result = await authManager.authWithGoogle()
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let success):
+                    print(success)
+                case .failure(let failure):
+                    print(failure)
+                }
+            }
+        }
+    }
+    
+    func handleSignInWithAppleRequest(_ request: ASAuthorizationOpenIDRequest) {
+        authManager.handleSignInWithAppleRequest(request)
+    }
+    
+    func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) {
+        Task {
+           let authResult = await authManager.handleSignInWithAppleCompletion(result)
+            
+            DispatchQueue.main.async {
+                switch authResult {
+                case .success(let success):
+                    self.navigateLogic(.withApple)
+                case .failure(let failure):
+                    print(failure.localizedDescription)
+                }
+            }
+        }
     }
     
     func navigateLogic(_ navigateCase: AuthNavigate) {
@@ -27,9 +59,9 @@ class AuthViewModel: ObservableObject {
         
         switch navigateCase {
         case .withApple:
-            authWithApple()
+            break
         case .withGoogle:
-            authWithGoogle()
+           break
         }
         
     }
