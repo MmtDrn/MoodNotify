@@ -10,7 +10,7 @@ import AuthenticationServices
 
 class AuthViewModel: ObservableObject {
     // MARK: - Properties
-    @Published var isPresented: Bool = false
+    @Published var succesLogin: Bool = false
     var navigateCase: AuthNavigate?
     
     var authManager: FBAuthManagerProtocol
@@ -25,10 +25,10 @@ class AuthViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 switch result {
-                case .success(let success):
-                    print(success)
+                case .success:
+                    self.succesLogin = true
                 case .failure(let failure):
-                    print(failure)
+                    self.succesLogin = false
                 }
             }
         }
@@ -44,25 +44,12 @@ class AuthViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 switch authResult {
-                case .success(let success):
-                    self.navigateLogic(.withApple)
+                case .success:
+                    self.succesLogin = true
                 case .failure(let failure):
-                    print(failure.localizedDescription)
+                    self.succesLogin = false
                 }
             }
         }
-    }
-    
-    func navigateLogic(_ navigateCase: AuthNavigate) {
-        self.isPresented = true
-        self.navigateCase = navigateCase
-        
-        switch navigateCase {
-        case .withApple:
-            break
-        case .withGoogle:
-           break
-        }
-        
     }
 }

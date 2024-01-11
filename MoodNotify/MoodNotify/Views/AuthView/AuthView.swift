@@ -10,6 +10,7 @@ import _AuthenticationServices_SwiftUI
 
 struct AuthView: View {
     @ObservedObject private var viewModel = AuthViewModel(authManager: FBAuthManager.shared)
+    @EnvironmentObject private var appRootManager: AppRootManager
     
     // MARK: - Body
     var body: some View {
@@ -44,16 +45,14 @@ struct AuthView: View {
             }
         } //: VStack
         .navigationBarBackButtonHidden()
-        .navigationDestination(isPresented: $viewModel.isPresented) {
-            switch viewModel.navigateCase {
-            case .withApple:
-                UserAppearanceView()
-                    .toolbarRole(.editor)
-            case .withGoogle:
-                UserAppearanceView()
-                    .toolbarRole(.editor)
-            case .none:
-                EmptyView()
+        .onChange(of: viewModel.succesLogin) { value in
+            switch value {
+            case true:
+                withAnimation(.easeIn) {
+                    self.appRootManager.currentRoot = .tabbar
+                }
+            case false:
+                print("error")
             }
         }
     }
