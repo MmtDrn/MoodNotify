@@ -7,16 +7,42 @@
 
 import SwiftUI
 import AuthenticationServices
+import Combine
 
 class AuthViewModel: ObservableObject {
     // MARK: - Properties
     @Published var succesLogin: Bool?
     @Published var showAlert: Bool = false
     
-    var authManager: FBAuthManagerProtocol
+    private var appRootManager: AppRootManager?
+    private var authManager: FBAuthManagerProtocol
+    private var cancellables = Set<AnyCancellable>()
     
     init(authManager: FBAuthManagerProtocol) {
         self.authManager = authManager
+        addLoginResultSubscriber()
+    }
+    
+    func setupAppRouter(router: AppRootManager) {
+        self.appRootManager = router
+    }
+    
+    private func addLoginResultSubscriber() {
+        $succesLogin
+            .sink { [weak self] value in
+                guard let self else { return }
+                switch value {
+                case true:
+                    withAnimation(.easeIn) {
+                        guard let appRootManager = self.appRootManager else { return }
+                        appRootManager.currentRoot = .tabbar
+                    }
+                case false:
+                    self.showAlert.toggle()
+                default: break
+                }
+            }
+            .store(in: &cancellables)
     }
     
     func authWithGoogle() async {

@@ -45,22 +45,14 @@ struct AuthView: View {
             }
         } //: VStack
         .navigationBarBackButtonHidden()
+        .onAppear {
+            self.viewModel.setupAppRouter(router: appRootManager)
+        }
         .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text("oops!"),
                   message: Text("Something went wrong. Please try again."),
                   dismissButton: .default(Text("OK")))
         }
-        .onReceive(viewModel.$succesLogin, perform: { value in
-            switch value {
-            case true:
-                withAnimation(.easeIn) {
-                    self.appRootManager.currentRoot = .tabbar
-                }
-            case false:
-                self.viewModel.showAlert.toggle()
-            default: break
-            }
-        })
     }
 }
 
