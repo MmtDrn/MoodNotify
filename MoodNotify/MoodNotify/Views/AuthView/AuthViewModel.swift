@@ -10,8 +10,8 @@ import AuthenticationServices
 
 class AuthViewModel: ObservableObject {
     // MARK: - Properties
-    @Published var succesLogin: Bool = false
-    var navigateCase: AuthNavigate?
+    @Published var succesLogin: Bool?
+    @Published var showAlert: Bool = false
     
     var authManager: FBAuthManagerProtocol
     
